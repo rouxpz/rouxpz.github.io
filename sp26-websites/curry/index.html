@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dock Study</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="desktop" aria-label="Full-screen desktop with dock">
+      <!-- Dock icons use user-provided assets from the "2025 APP ICONS" folder. -->
+      <section class="desktop-files" aria-label="Desktop files">
+        <button class="desktop-file" type="button" data-file-id="field-notes" style="--x: 8%; --y: 14%">
+          <span class="file-icon" aria-hidden="true"></span>
+          <span class="file-name">field_notes.txt</span>
+        </button>
+        <button class="desktop-file" type="button" data-file-id="room-scan" style="--x: 18%; --y: 52%">
+          <span class="file-icon" aria-hidden="true"></span>
+          <span class="file-name">room_scan.md</span>
+        </button>
+        <button class="desktop-file" type="button" data-file-id="transit-log" style="--x: 76%; --y: 18%">
+          <span class="file-icon" aria-hidden="true"></span>
+          <span class="file-name">transit_log.txt</span>
+        </button>
+        <button class="desktop-file" type="button" data-file-id="redactions" style="--x: 66%; --y: 44%">
+          <span class="file-icon" aria-hidden="true"></span>
+          <span class="file-name">redactions.rtf</span>
+        </button>
+        <button class="desktop-file" type="button" data-file-id="timeline" style="--x: 84%; --y: 62%">
+          <span class="file-icon" aria-hidden="true"></span>
+          <span class="file-name">timeline.csv</span>
+        </button>
+      </section>
+
+      <section class="window-layer" id="windowLayer" aria-live="polite"></section>
+
+      <nav class="dock-shell" aria-label="macOS-style dock">
+        <ul class="dock" id="dock">
+          <li class="dock-item running">
+            <button class="dock-icon" type="button" aria-label="Finder">
+              <img src="2025%20APP%20ICONS/finder-2025-11-13.webp" alt="Finder" />
+            </button>
+            <span class="dock-label">Finder</span>
+          </li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="Siri">
+              <img src="2025%20APP%20ICONS/siri-2025-11-14.webp" alt="Siri" />
+            </button>
+            <span class="dock-label">Siri</span>
+          </li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="Find My">
+              <img src="2025%20APP%20ICONS/find-my-2025-11-13.webp" alt="Find My" />
+            </button>
+            <span class="dock-label">Find My</span>
+          </li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="Contacts">
+              <img src="2025%20APP%20ICONS/contacts-2025-11-13.webp" alt="Contacts" />
+            </button>
+            <span class="dock-label">Contacts</span>
+          </li>
+          <li class="dock-item running">
+            <button class="dock-icon" type="button" aria-label="Notes">
+              <img src="2025%20APP%20ICONS/notes-2025-11-13.webp" alt="Notes" />
+            </button>
+            <span class="dock-label">Notes</span>
+          </li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="Reminders">
+              <img src="2025%20APP%20ICONS/reminders-2025-11-14.webp" alt="Reminders" />
+            </button>
+            <span class="dock-label">Reminders</span>
+          </li>
+          <li class="dock-item running">
+            <button class="dock-icon" type="button" aria-label="Photos">
+              <img src="2025%20APP%20ICONS/photos-2025-11-14.webp" alt="Photos" />
+            </button>
+            <span class="dock-label">Photos</span>
+          </li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="Messages">
+              <img src="2025%20APP%20ICONS/messages-2025-11-13.webp" alt="Messages" />
+            </button>
+            <span class="dock-label">Messages</span>
+          </li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="Music">
+              <img src="2025%20APP%20ICONS/music-2025-11-13.webp" alt="Music" />
+            </button>
+            <span class="dock-label">Music</span>
+          </li>
+          <li class="dock-item dock-divider" aria-hidden="true"></li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="Safari">
+              <img src="2025%20APP%20ICONS/safari-2025-11-14.webp" alt="Safari" />
+            </button>
+            <span class="dock-label">Safari</span>
+          </li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="App Store">
+              <img src="2025%20APP%20ICONS/app-store-2025-11-13.webp" alt="App Store" />
+            </button>
+            <span class="dock-label">App Store</span>
+          </li>
+          <li class="dock-item">
+            <button class="dock-icon" type="button" aria-label="Stickies">
+              <img src="2025%20APP%20ICONS/stickies-2025-11-14.webp" alt="Stickies" />
+            </button>
+            <span class="dock-label">Stickies</span>
+          </li>
+        </ul>
+      </nav>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

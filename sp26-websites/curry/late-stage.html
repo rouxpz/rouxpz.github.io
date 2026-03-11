@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Late Stage</title>
+    <link rel="stylesheet" href="late-stage.css" />
+    <script>
+      // If the user refreshes on this "late stage" page, bounce them back to the dock home.
+      (function () {
+        try {
+          var nav = performance && performance.getEntriesByType
+            ? performance.getEntriesByType("navigation")[0]
+            : null;
+          var type = nav && nav.type ? nav.type : null;
+          var isReload = type === "reload";
+          // Legacy fallback.
+          if (!type && performance && performance.navigation) {
+            isReload = performance.navigation.type === 1;
+          }
+          if (isReload) location.replace("./index.html");
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="stage" id="stage">
+      <div id="impactFlash" class="impact-flash" aria-hidden="true"></div>
+
+      <section class="scene scene-words" id="sceneWords">
+        <div class="pin">
+          <div class="word-field" id="wordField"></div>
+        </div>
+      </section>
+
+      <section class="scene scene-prose" id="sceneProse">
+        <div class="prose-shell" id="proseShell">
+          <canvas id="proseParticles" aria-hidden="true"></canvas>
+          <div class="prose-layout">
+            <p class="prose-mess prose-mess--col-a prose-size-xl" data-prose>
+              PROTOCOL VX-447 // CLEARANCE BLACK // NODE MAP N13-N21-Q04 // CHECKSUM LOOP 77A0.12 // SAMPLE RATE 08.4KHZ // ERROR FAMILY SILENT SUBSTITUTION // REDACTION LAYER ACTIVE // TRANSMISSION NOTE: PUBLIC TERMS REMAPPED TO CONTROL TOKENS // EXTERNAL DISCLOSURE WINDOW CLOSED // AUTHOR SIGNATURE MASKED BY ROUTING SERVICE.
+            </p>
+            <p class="prose-mess prose-mess--col-b prose-mess--stable prose-size-sm" data-prose>
+              OBSERVATION STACK // GEOLOCK 31-BETA // VECTOR DRIFT +0.043 // HEAT CORRELATION 0.91 // PACKETS CROSS-SIGNED BY MULTIPLE OFFICES // CLOCK AUTHORITY MISMATCH // STATUS: PLAUSIBLE RECORD / UNVERIFIED SOURCE / DO NOT EXPAND ABBREVIATIONS.
+            </p>
+            <p class="prose-mess prose-mess--col-c prose-size-md" data-prose data-append="// ADDENDUM: LATENT STREAM">
+              BIO-METRIC TABLE // BROW 0.67 // LIPLINE 0.12 // JAW OFFSET 0.94 // FACIAL LATENCY 18MS // MIRROR SIGNATURE COLLISION DETECTED // HEURISTIC FLAG CLONE-RISK ENABLED // OUTPUT RULE: PUBLISH METRICS, HIDE MODEL // INCIDENT LABEL: WITNESS VECTOR DUPLICATED // TRACE ROUTE RESTRICTED.
+            </p>
+            <p class="prose-mess prose-mess--col-d prose-mess--stable prose-size-xs" data-prose>
+              INDEX 7C // DELTA +03 // SECTOR LOCK Q2.
+            </p>
+            <p class="prose-mess prose-mess--col-e prose-size-lg" data-prose data-append="// CONTINUITY THREAD REOPENS">
+              RESTRICTED SUMMARY // DOC FAMILY OMEGA-THREAD // INGEST: VIDEO AUDIO TRANSCRIPT SENSOR // TOKEN SWAP RATE 14.2% // CONDITIONAL BLOCK REDACTION // FINAL LABEL NO ANOMALY // AUX LABEL ANOMALY PERSISTS // RELEASE CHANNEL INTERNAL SCIENTIFIC BRIEF // RETENTION TERM EXTENDED INDEFINITELY.
+            </p>
+            <p class="prose-mess prose-mess--col-f prose-mess--stable prose-size-md" data-prose>
+              CLASSIFIED APPENDIX // TERMINOLOGY NORMALIZATION PIPELINE ENABLED // EQUIVALENCE MAP LINKS STABILITY TO COMPLIANCE, LINKS ERROR TO WITNESS ACCOUNT // DIFFERENTIAL EDITS APPEAR BETWEEN ARCHIVE SNAPSHOTS WITHOUT EXPLICIT REVISION LOG // IF SYMBOL FIELDS REORDER UNDER CURSOR, PRESERVE CAPTURE: EVENT TYPE IS LISTED AS EXPECTED BEHAVIOR.
+            </p>
+            <p class="prose-mess prose-mess--col-g prose-size-sm" data-prose>
+              AUXILIARY TRACE // SENSOR BUS 4A // INCOMPLETE PAYLOAD // COMMENT SUPPRESSED.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene-end" id="sceneEnd">
+        <div class="pin">
+          <div class="end-fragment mess-text" id="endFragment">no stable author</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="late-stage.js"></script>
+  </body>
+</html>
