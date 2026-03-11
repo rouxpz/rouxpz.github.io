@@ -38,6 +38,7 @@ h1 {
     border: #c0c0c0;
     border-width: thick;
     border-style: ridge;
+    text-align:center;
 }
 
 h3 {
