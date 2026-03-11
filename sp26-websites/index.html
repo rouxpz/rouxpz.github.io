@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ART 390U: Website Projects</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h1>ART 390U: Anti-User Experience</h1>
+        <h3 id="left">Website Project, Spring 2026</h3>
+        <h3 id="right"><a href="https://forms.gle/g6aKjasbcAEpSg3q9" target="_blank">Submit Feedback Here</a></h3>
+
+        <audio id="audio" src="startup.mp4"></audio>
+
+        <div id="onload">
+            <img id="startupScreen" src="windows_95.jpg" alt="">
+            <button onclick="playAudio()" id="startButton">Click to Begin</button>
+        </div>
+        
+
+        <div class="row" id="topRow">
+            <a class="projectlink" href="./curry/" target="_blank">Brian</a>
+            <a class="projectlink" href="./kakule/" target="_blank">David</a>
+            <a class="projectlink" href="./qadus/" target="_blank">Farreen</a>
+        </div>
+
+        <div class="row">
+            <a class="projectlink" href="./saluja/" target="_blank"><div class="student">Farrell</div></a>
+            <a class="projectlink" href="./martin/" target="_blank"><div class="student">Jacory</div></a>
+            <a class="projectlink" href="./vassar/" target="_blank"><div class="student">Liv</div></a>
+        </div>
+
+        <div class="row">
+            <a class="projectlink" href="./minevski/" target="_blank"><div class="student">Misho</div></a>
+            <a class="projectlink" href="https://ncp294.github.io/thinkBeforeYouSpeak/" target="_blank"><div class="student">Nate</div></a>
+            <a class="projectlink" href="https://ninaaavo.github.io/Anti-UX/" target="_blank"><div class="student">Nina</div></a>
+        </div>
+
+        <div class="row">
+            <a class="projectlink" href="https://editor.p5js.org/owenlonergan/full/X4xVxMyBke" target="_blank"><div class="student">Owen</div></a>
+            <a class="projectlink" href="./dolgikh/" target="_blank"><div class="student">Vera</div></a>
+        </div>
+        <br><br>
+        <p class="credits">Design inspired by Windows 95. Typeface is W95A by FontsArena. Startup sound originally composed by Brian Eno. Wallpaper sourced <a class="creditLink" href="https://www.deviantart.com/docacola/art/Windows-95-Logo-Wallpaper-597526492" target="_blank">from here</a>.</p>
+        
+        
+    </body>
+
+    <script>
+
+        let loaded = false;
+
+        function playAudio() {
+
+            if (loaded === false) {
+                document.getElementById("audio").play();
+            setTimeout(function() {
+                document.getElementById("onload").style.display = "none";
+            }, 6000);
+            loaded = true;
+            }
+            
+        }
+
+        let buttons = document.getElementsByTagName("a");
+
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].onclick = function() {
+                //alert(buttons[i].innerHTML);
+                buttons[i].style.borderTop = "3px solid #000";
+                buttons[i].style.borderLeft = "3px solid #000";
+                buttons[i].style.borderRight = "3px solid #fff";
+                buttons[i].style.borderBottom = "3px solid #fff";
+            };
+        }
+
+
+    </script>
+
+</html>

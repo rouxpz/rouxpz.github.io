@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'W95FA';
+    src: url(./w95fa.woff);
+}
+
+body {
+    font-family: 'W95FA', monospace;
+    background-color: rgb(2,129,127);
+    padding-top:3%;
+}
+
+#onload {
+    position:fixed;
+    top:-3%;
+    left:0%;
+}
+
+#startupScreen {
+    width:100vw; 
+}
+
+#startButton {
+    position:fixed;
+    top:10%;
+    left:42%;
+    font-family: 'W95FA', monospace;
+    width:15%;
+    height:5%;
+    font-size:medium;
+}
+
+h1 {
+    font-size: 3vw;
+    width: 40%;
+    margin: auto;
+    padding: 3%;
+    background-color: white;
+    border: #c0c0c0;
+    border-width: thick;
+    border-style: ridge;
+}
+
+h3 {
+    font-size:1.75vw;
+    position:absolute;
+    width:15%;
+}
+
+.credits {
+    font-size:1.3vw;
+    width:50%;
+    margin: auto;
+    line-height: 1.5vw;
+}
+
+h3, .credits {
+    background-color: white;
+    border: #c0c0c0;
+    border-width: thick;
+    border-style: ridge;
+    text-align:center;
+    padding:1%;
+}
+
+#left {
+    top:3%;
+    left:3%;
+}
+
+#right {
+    top:3%;
+    left:80%;
+}
+
+.row {
+    /* width:99%;
+    background-color: aqua;
+    margin: auto; */
+}
+
+#startButton:hover {
+    background-color: gray;
+}
+
+a:hover {
+    background-color: gray;
+}
+
+a {
+    color:blue;
+    padding:2%;
+    margin:1%;
+    width: 25%;
+    font-size:2vw;
+    text-align: center;
+    
+}
+
+.creditLink {
+    font-size:1.3vw;
+    padding:0%;
+    margin:0%;
+}
+
+a:visited {
+    color:purple;
+}
+
+.projectlink, #startButton {
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    background-color: #c0c0c0;
+}
+
+.row {
+    display:flex;
+    justify-content:space-around;
+}
+
+#topRow {
+    margin-top:2%;
+}
