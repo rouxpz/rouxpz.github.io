@@ -1,0 +1,31 @@
+body {
+  background-color: #4a90e2;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 20%;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#timer {
+  font-size: 70px;
+  margin: 20px;
+}
+
+#alternative {
+  font-size: 30px;
+  margin: 20px;
+}
+
+a {
+  color: yellow;
+  font-size: 20px;
+}

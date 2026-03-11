@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time Awareness Website </title>
+        <!-- link fonts from google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Special+Elite&display=swap" rel="stylesheet">
+    <!-- CSS  -->
+    <style> 
+        body {
+     margin:0;
+     font-family:'Montserrat', sans-serif;
+     background: #f2f2f2;
+     transition: filter 2s;
+    }
+
+       header{
+        position:fixed;
+        top:0;
+        width:100%;
+        background:#111;
+        color:white;
+        text-align:center;
+        padding:20px;
+        letter-spacing:1px;
+        z-index:1000;
+      }
+
+     main {
+    margin-top:100px;}
+
+     section {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;}
+    /* styles the popup message box that appears in the center of the screen */
+    #popup{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid black;
+    padding: 30px;
+    font-size: 20px;
+    display: none;
+    /* makes sure that it appears above everything */
+    z-index: 9999; 
+    width: 300px;
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    letter-spacing:1px;
+    line-height: 1.6;
+    filter: none;
+}
+
+/* styles the small x button used to close popup message */
+    #closeButton{
+  position:absolute;
+  top:10px;
+  right:15px;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:bold;
+  }
+
+    .card{
+        max-width:600px;
+        margin:20px auto;
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+    .card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:8px;
+    margin:15px 0;
+    }
+    </style>
+    </head>
+
+    <body>
+        <header id="header">
+            <h1> You have <span id="timeleft">1440</span> minutes today </h1>
+        </header>
+
+        <main id="content">
+
+
+          <!-- The following are the posts that are scrolled through. I pasted the four sets to create the illusion of 
+           an infinite loop. -->
+          <!-- Card Set 1 -->
+            <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class = "card">
+            <h2> 5 Morning Habits That Improve Your Life</h2>
+            <p>Starting your morning with inetention can improve focus productivity and mental clarity throughout the day</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time : 3 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class ="card">
+            <h2>Quote of the Day</h2>
+            <p>"Time is money." - Benjamin Franklin </p>
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <p>Estimated time : 10 seconds</p>
+            </div>
+            </section>
+            
+            <section>
+            <div class = "card">
+            <h2>Did you know?</h2>
+            <p>Screen time averages over 7.5 hours daily for US Teens. It is linked to poor sleep, reduced physical activity, and developmental delays.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time : 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+            <p>Look at this cute cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+          </section>
+
+            <section>
+            <div class = "card">
+            <h2>Question</h2>
+            <p> If you had an extra hour of your day today, what would you do with it?</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 3  minutes</p>
+            </div>
+            </section>
+
+
+            <!-- Card Section 2-->
+
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>A good reminder to slow down.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>4 Small Habits That Improve Your Morning</h2>
+            <p>Simple routines like stretching, journaling, or planning your day can help you feel more focused and organized.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 3 minutes</p>
+           </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Quote</h2>
+          <p>"Lost time is never found again." - Benjamin Franklin</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 10 seconds</p>
+          </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Did you know?</h2>
+          <p>The average person checks their phone over 90 times a day.</p>
+          <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+          <p>Estimated time: 2 minutes</p>
+          </div>
+          </section>
+
+          
+          <section>
+          <div class="card">
+          <h3>@cat_daily</h3>
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006">
+          <p>Another cat you didn’t know you needed to see today.</p>
+          <p>Estimated time: 15 seconds</p>
+          </div>
+          </section>
+
+           <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p> Haven't you already seen this one?</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+          <section>
+          <div class="card">
+          <h2>Question</h2>
+          <p>What is something you wish you had more time for?</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 3 minutes</p>
+          </div>
+          </section>
+
+            <!-- Third Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>5 Ways to Start Your Day Better</h2>
+            <p>Taking a few minutes in the morning to plan your day can reduce stress and increase productivity.</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time: 4 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Daily Quote</h2>
+            <p>"The bad news is time flies. The good news is you're the pilot."</p>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Adults spend an average of over 7 hours a day looking at screens.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba">
+            <p>You stopped scrolling for this cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>If you could pause time for one hour, what would you do?</p>
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+            <p>Estimated time: 3 minutes</p>
+            </div>
+            </section>
+
+            <!-- Fourth Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Another quiet moment in nature.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>3 Simple Morning Habits</h2>
+            <p>Even small changes in your morning routine can have a big impact on how the rest of your day feels.</p>
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <p>Estimated time: 5 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Quote</h2>
+            <p>"Time is what we want most, but what we use worst." - William Penn</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Studies show that constant notifications can reduce focus and productivity.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+          
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
+            <p>Just a cat sitting here.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>When was the last time you spent an hour without looking at a screen?</p>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Estimated time: 3 minutes</p>
+            </div>
+            </section>
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class = "card">
+            <h2> 5 Morning Habits That Improve Your Life</h2>
+            <p>Starting your morning with inetention can improve focus productivity and mental clarity throughout the day</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time : 3 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class ="card">
+            <h2>Quote of the Day</h2>
+            <p>"Time is money." - Benjamin Franklin </p>
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <p>Estimated time : 10 seconds</p>
+            </div>
+            </section>
+            
+            <section>
+            <div class = "card">
+            <h2>Did you know?</h2>
+            <p>Screen time averages over 7.5 hours daily for US Teens. It is linked to poor sleep, reduced physical activity, and developmental delays.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time : 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+            <p>Look at this cute cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+          </section>
+
+            <section>
+            <div class = "card">
+            <h2>Question</h2>
+            <p> If you had an extra hour of your day today, what would you do with it?</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 3  minutes</p>
+            </div>
+            </section>
+
+
+            <!-- Card Section 2-->
+
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>A good reminder to slow down.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>4 Small Habits That Improve Your Morning</h2>
+            <p>Simple routines like stretching, journaling, or planning your day can help you feel more focused and organized.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 3 minutes</p>
+           </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Quote</h2>
+          <p>"Lost time is never found again." - Benjamin Franklin</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 10 seconds</p>
+          </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Did you know?</h2>
+          <p>The average person checks their phone over 90 times a day.</p>
+          <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+          <p>Estimated time: 2 minutes</p>
+          </div>
+          </section>
+
+          
+          <section>
+          <div class="card">
+          <h3>@cat_daily</h3>
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006">
+          <p>Another cat you didn’t know you needed to see today.</p>
+          <p>Estimated time: 15 seconds</p>
+          </div>
+          </section>
+
+           <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p> Haven't you already seen this one?</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+          <section>
+          <div class="card">
+          <h2>Question</h2>
+          <p>What is something you wish you had more time for?</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 3 minutes</p>
+          </div>
+          </section>
+
+            <!-- Third Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>5 Ways to Start Your Day Better</h2>
+            <p>Taking a few minutes in the morning to plan your day can reduce stress and increase productivity.</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time: 4 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Daily Quote</h2>
+            <p>"The bad news is time flies. The good news is you're the pilot."</p>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Adults spend an average of over 7 hours a day looking at screens.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba">
+            <p>You stopped scrolling for this cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>If you could pause time for one hour, what would you do?</p>
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+            <p>Estimated time: 3 minutes</p>
+            </div>
+            </section>
+
+            <!-- Fourth Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Another quiet moment in nature.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>3 Simple Morning Habits</h2>
+            <p>Even small changes in your morning routine can have a big impact on how the rest of your day feels.</p>
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <p>Estimated time: 5 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Quote</h2>
+            <p>"Time is what we want most, but what we use worst." - William Penn</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Studies show that constant notifications can reduce focus and productivity.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+          
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
+            <p>Just a cat sitting here.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>When was the last time you spent an hour without looking at a screen?</p>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Estimated time: 3minutes</p>
+            </div>
+            </section>
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class = "card">
+            <h2> 5 Morning Habits That Improve Your Life</h2>
+            <p>Starting your morning with inetention can improve focus productivity and mental clarity throughout the day</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time : 3 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class ="card">
+            <h2>Quote of the Day</h2>
+            <p>"Time is money." - Benjamin Franklin </p>
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <p>Estimated time : 10 seconds</p>
+            </div>
+            </section>
+            
+            <section>
+            <div class = "card">
+            <h2>Did you know?</h2>
+            <p>Screen time averages over 7.5 hours daily for US Teens. It is linked to poor sleep, reduced physical activity, and developmental delays.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time : 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+            <p>Look at this cute cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+          </section>
+
+            <section>
+            <div class = "card">
+            <h2>Question</h2>
+            <p> If you had an extra hour of your day today, what would you do with it?</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 3  minutes</p>
+            </div>
+            </section>
+
+
+            <!-- Card Section 2-->
+
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>A good reminder to slow down.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>4 Small Habits That Improve Your Morning</h2>
+            <p>Simple routines like stretching, journaling, or planning your day can help you feel more focused and organized.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 3 minutes</p>
+           </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Quote</h2>
+          <p>"Lost time is never found again." - Benjamin Franklin</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 10 seconds</p>
+          </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Did you know?</h2>
+          <p>The average person checks their phone over 90 times a day.</p>
+          <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+          <p>Estimated time: 2 minutes</p>
+          </div>
+          </section>
+
+          
+          <section>
+          <div class="card">
+          <h3>@cat_daily</h3>
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006">
+          <p>Another cat you didn’t know you needed to see today.</p>
+          <p>Estimated time: 15 seconds</p>
+          </div>
+          </section>
+
+           <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p> Haven't you already seen this one?</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+          <section>
+          <div class="card">
+          <h2>Question</h2>
+          <p>What is something you wish you had more time for?</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 3 minutes</p>
+          </div>
+          </section>
+
+            <!-- Third Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>5 Ways to Start Your Day Better</h2>
+            <p>Taking a few minutes in the morning to plan your day can reduce stress and increase productivity.</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time: 4 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Daily Quote</h2>
+            <p>"The bad news is time flies. The good news is you're the pilot."</p>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Adults spend an average of over 7 hours a day looking at screens.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba">
+            <p>You stopped scrolling for this cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>If you could pause time for one hour, what would you do?</p>
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+            <p>Estimated time: 3 minutes</p>
+            </div>
+            </section>
+
+            <!-- Fourth Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Another quiet moment in nature.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>3 Simple Morning Habits</h2>
+            <p>Even small changes in your morning routine can have a big impact on how the rest of your day feels.</p>
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <p>Estimated time: 5 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Quote</h2>
+            <p>"Time is what we want most, but what we use worst." - William Penn</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Studies show that constant notifications can reduce focus and productivity.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+          
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
+            <p>Just a cat sitting here.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>When was the last time you spent an hour without looking at a screen?</p>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Estimated time: 3minutes</p>
+            </div>
+            </section>
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class = "card">
+            <h2> 5 Morning Habits That Improve Your Life</h2>
+            <p>Starting your morning with inetention can improve focus productivity and mental clarity throughout the day</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time : 3 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class ="card">
+            <h2>Quote of the Day</h2>
+            <p>"Time is money." - Benjamin Franklin </p>
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <p>Estimated time : 10 seconds</p>
+            </div>
+            </section>
+            
+            <section>
+            <div class = "card">
+            <h2>Did you know?</h2>
+            <p>Screen time averages over 7.5 hours daily for US Teens. It is linked to poor sleep, reduced physical activity, and developmental delays.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time : 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+            <p>Look at this cute cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+          </section>
+
+            <section>
+            <div class = "card">
+            <h2>Question</h2>
+            <p> If you had an extra hour of your day today, what would you do with it?</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 3  minutes</p>
+            </div>
+            </section>
+
+
+            <!-- Card Section 2-->
+
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>A good reminder to slow down.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>4 Small Habits That Improve Your Morning</h2>
+            <p>Simple routines like stretching, journaling, or planning your day can help you feel more focused and organized.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 3 minutes</p>
+           </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Quote</h2>
+          <p>"Lost time is never found again." - Benjamin Franklin</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 10 seconds</p>
+          </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Did you know?</h2>
+          <p>The average person checks their phone over 90 times a day.</p>
+          <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+          <p>Estimated time: 2 minutes</p>
+          </div>
+          </section>
+
+          
+          <section>
+          <div class="card">
+          <h3>@cat_daily</h3>
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006">
+          <p>Another cat you didn’t know you needed to see today.</p>
+          <p>Estimated time: 15 seconds</p>
+          </div>
+          </section>
+
+           <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p> Haven't you already seen this one?</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+          <section>
+          <div class="card">
+          <h2>Question</h2>
+          <p>What is something you wish you had more time for?</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 3 minutes</p>
+          </div>
+          </section>
+
+            <!-- Third Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>5 Ways to Start Your Day Better</h2>
+            <p>Taking a few minutes in the morning to plan your day can reduce stress and increase productivity.</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time: 4 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Daily Quote</h2>
+            <p>"The bad news is time flies. The good news is you're the pilot."</p>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Adults spend an average of over 7 hours a day looking at screens.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba">
+            <p>You stopped scrolling for this cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>If you could pause time for one hour, what would you do?</p>
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+            <p>Estimated time: 3 minutes</p>
+            </div>
+            </section>
+
+            <!-- Fourth Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Another quiet moment in nature.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>3 Simple Morning Habits</h2>
+            <p>Even small changes in your morning routine can have a big impact on how the rest of your day feels.</p>
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <p>Estimated time: 5 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Quote</h2>
+            <p>"Time is what we want most, but what we use worst." - William Penn</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Studies show that constant notifications can reduce focus and productivity.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+          
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
+            <p>Just a cat sitting here.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>When was the last time you spent an hour without looking at a screen?</p>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Estimated time: 3minutes</p>
+            </div>
+            </section>
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class = "card">
+            <h2> 5 Morning Habits That Improve Your Life</h2>
+            <p>Starting your morning with inetention can improve focus productivity and mental clarity throughout the day</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time : 3 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class ="card">
+            <h2>Quote of the Day</h2>
+            <p>"Time is money." - Benjamin Franklin </p>
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <p>Estimated time : 10 seconds</p>
+            </div>
+            </section>
+            
+            <section>
+            <div class = "card">
+            <h2>Did you know?</h2>
+            <p>Screen time averages over 7.5 hours daily for US Teens. It is linked to poor sleep, reduced physical activity, and developmental delays.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time : 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+            <p>Look at this cute cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+          </section>
+
+            <section>
+            <div class = "card">
+            <h2>Question</h2>
+            <p> If you had an extra hour of your day today, what would you do with it?</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 3  minutes</p>
+            </div>
+            </section>
+
+
+            <!-- Card Section 2-->
+
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>A good reminder to slow down.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>4 Small Habits That Improve Your Morning</h2>
+            <p>Simple routines like stretching, journaling, or planning your day can help you feel more focused and organized.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 3 minutes</p>
+           </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Quote</h2>
+          <p>"Lost time is never found again." - Benjamin Franklin</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 10 seconds</p>
+          </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Did you know?</h2>
+          <p>The average person checks their phone over 90 times a day.</p>
+          <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+          <p>Estimated time: 2 minutes</p>
+          </div>
+          </section>
+
+          
+          <section>
+          <div class="card">
+          <h3>@cat_daily</h3>
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006">
+          <p>Another cat you didn’t know you needed to see today.</p>
+          <p>Estimated time: 15 seconds</p>
+          </div>
+          </section>
+
+           <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p> Haven't you already seen this one?</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+          <section>
+          <div class="card">
+          <h2>Question</h2>
+          <p>What is something you wish you had more time for?</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 3 minutes</p>
+          </div>
+          </section>
+
+            <!-- Third Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>5 Ways to Start Your Day Better</h2>
+            <p>Taking a few minutes in the morning to plan your day can reduce stress and increase productivity.</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time: 4 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Daily Quote</h2>
+            <p>"The bad news is time flies. The good news is you're the pilot."</p>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Adults spend an average of over 7 hours a day looking at screens.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba">
+            <p>You stopped scrolling for this cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>If you could pause time for one hour, what would you do?</p>
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+            <p>Estimated time: 3 minutes</p>
+            </div>
+            </section>
+
+            <!-- Fourth Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Another quiet moment in nature.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>3 Simple Morning Habits</h2>
+            <p>Even small changes in your morning routine can have a big impact on how the rest of your day feels.</p>
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <p>Estimated time: 5 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Quote</h2>
+            <p>"Time is what we want most, but what we use worst." - William Penn</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Studies show that constant notifications can reduce focus and productivity.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+          
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
+            <p>Just a cat sitting here.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>When was the last time you spent an hour without looking at a screen?</p>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Estimated time: 3minutes</p>
+            </div>
+            </section>
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class = "card">
+            <h2> 5 Morning Habits That Improve Your Life</h2>
+            <p>Starting your morning with inetention can improve focus productivity and mental clarity throughout the day</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time : 3 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class ="card">
+            <h2>Quote of the Day</h2>
+            <p>"Time is money." - Benjamin Franklin </p>
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+            <p>Estimated time : 10 seconds</p>
+            </div>
+            </section>
+            
+            <section>
+            <div class = "card">
+            <h2>Did you know?</h2>
+            <p>Screen time averages over 7.5 hours daily for US Teens. It is linked to poor sleep, reduced physical activity, and developmental delays.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time : 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
+            <p>Look at this cute cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+          </section>
+
+            <section>
+            <div class = "card">
+            <h2>Question</h2>
+            <p> If you had an extra hour of your day today, what would you do with it?</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 3  minutes</p>
+            </div>
+            </section>
+
+
+            <!-- Card Section 2-->
+
+             <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>A good reminder to slow down.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>4 Small Habits That Improve Your Morning</h2>
+            <p>Simple routines like stretching, journaling, or planning your day can help you feel more focused and organized.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 3 minutes</p>
+           </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Quote</h2>
+          <p>"Lost time is never found again." - Benjamin Franklin</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 10 seconds</p>
+          </div>
+          </section>
+
+          <section>
+          <div class="card">
+          <h2>Did you know?</h2>
+          <p>The average person checks their phone over 90 times a day.</p>
+          <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+          <p>Estimated time: 2 minutes</p>
+          </div>
+          </section>
+
+          
+          <section>
+          <div class="card">
+          <h3>@cat_daily</h3>
+          <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006">
+          <p>Another cat you didn’t know you needed to see today.</p>
+          <p>Estimated time: 15 seconds</p>
+          </div>
+          </section>
+
+           <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p> Haven't you already seen this one?</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+          <section>
+          <div class="card">
+          <h2>Question</h2>
+          <p>What is something you wish you had more time for?</p>
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+          <p>Estimated time: 3 minutes</p>
+          </div>
+          </section>
+
+            <!-- Third Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>5 Ways to Start Your Day Better</h2>
+            <p>Taking a few minutes in the morning to plan your day can reduce stress and increase productivity.</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time: 4 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Daily Quote</h2>
+            <p>"The bad news is time flies. The good news is you're the pilot."</p>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Adults spend an average of over 7 hours a day looking at screens.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba">
+            <p>You stopped scrolling for this cat.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>If you could pause time for one hour, what would you do?</p>
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+            <p>Estimated time: 3 minutes</p>
+            </div>
+            </section>
+
+            <!-- Fourth Section Loop -->
+              <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Another quiet moment in nature.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>3 Simple Morning Habits</h2>
+            <p>Even small changes in your morning routine can have a big impact on how the rest of your day feels.</p>
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <p>Estimated time: 5 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Quote</h2>
+            <p>"Time is what we want most, but what we use worst." - William Penn</p>
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+            <p>Estimated time: 10 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Did you know?</h2>
+            <p>Studies show that constant notifications can reduce focus and productivity.</p>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29">
+            <p>Estimated time: 2 minutes</p>
+            </div>
+            </section>
+          
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
+            <p>Just a cat sitting here.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>When was the last time you spent an hour without looking at a screen?</p>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Estimated time: 3minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@cat_daily</h3>
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4">
+            <p>Just a cat sitting here.</p>
+            <p>Estimated time: 15 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h2>Question</h2>
+            <p>When was the last time you spent an hour without looking at a screen?</p>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+            <p>Estimated time: 3 minutes</p>
+            </div>
+            </section>
+
+            <section>
+            <div class="card">
+            <h3>@nature_daily</h3>
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+            <p>Beautiful Views today.</p>
+            <p>Estimated time : 20 seconds</p>
+            </div>
+            </section>
+
+            <section>
+            <div class = "card">
+            <h2> 5 Morning Habits That Improve Your Life</h2>
+            <p>Starting your morning with inetention can improve focus productivity and mental clarity throughout the day</p>
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643">
+            <p>Estimated time : 3 minutes</p>
+            </div>
+            </section>
+            
+            
+          
+        </main>
+
+        <div id="popup">
+       <span id="closeButton">✖</span>
+      <div id="messageText"></div>
+      </div>
+<!-- Javascript -->
+       <script>
+        // stores total minutes of the day
+      let minutes = 1440;
+      // variable that trakcs time passing 
+      let secondsPassed = 0;
+
+
+
+    /* TIMER Function */
+
+    // function that runs to update timer
+    function updateTime(){
+
+    // this reduced the number of minutes remaining 
+    minutes = minutes - 8;
+    
+    //  makes sure the timer does not go into the negatives
+   if(minutes < 0){
+    minutes = 0;
+    }
+
+    /* update the number shown in the header timer */
+    document.getElementById("timeleft").textContent = minutes;
+
+
+/* visual effects */
+
+// The page will grayscale or blur during certain times
+
+if(minutes < 500){
+document.getElementById("content").style.filter = "grayscale(15%) blur(.5px)";
+}
+if(minutes < 450){
+document.getElementById("content").style.filter = "grayscale(25%) blur(.8px)";
+}
+if(minutes < 400){
+document.getElementById("content").style.filter = "grayscale(30%) blur(1px)";
+}
+
+if(minutes < 300){
+document.getElementById("content").style.filter = "grayscale(35%) blur(1.5px)";
+}
+
+if(minutes < 250){
+document.getElementById("content").style.filter = "grayscale(40%) blur(2px)";
+}
+
+if(minutes < 200){
+document.getElementById("content").style.filter = "grayscale(50%) blur(2.5px)";
+}
+
+if(minutes < 150){
+document.getElementById("content").style.filter = "grayscale(60%) blur(3px)";
+}
+
+if(minutes < 75){
+document.getElementById("content").style.filter = "grayscale(80%) blur(4px)";
+}
+
+// blurs and grayscales header at 0 
+if(minutes === 0){
+  document.getElementById("header").style.filter = "grayscale(100%) blur(6px)";
+}
+
+/*  time reaches 0 */
+
+// full grayscale and blur
+
+if(minutes === 0){
+
+document.getElementById("content").style.filter = "grayscale(100%) blur(6px)";
+
+/* stop timer intervals */
+clearInterval(timer);
+
+// Stop popup messages from appearing
+clearInterval(MessageTimer);
+
+/* show final message end demo*/
+// innerHTML used to insert HTML formatting text
+
+popup.innerHTML = "You have used all 1,440 minutes for today.<br><br>They will not return.<br><br>Come back tomorrow.";
+
+// display popup
+document.getElementById("popup").style.display = "block";
+
+/* lock scrolling permanently */
+document.body.style.overflow = "hidden";
+
+/* hide close button so that popup cannot be dismissed */
+document.getElementById("closeButton").style.display = "none";
+
+}
+
+
+}
+
+/* update number at top of page */
+document.getElementById("timeleft").textContent = minutes;
+
+// makes sure timer is updateTime runs every 1 second scaled
+    let timer = setInterval(updateTime,1000);
+
+
+
+
+    /* List of messages that are going to appear*/
+
+    let messages = [
+    "Your time is valuable.",
+    "You only have a limited number of minutes today.",
+    "Did you come here for something specific?",
+    "Or did you come here to pass the time?",
+    "You cannot get this time back.",
+   "Is this really how you want to spend your time?",
+    "This moment will not return.",
+    "Your time is disappearing."
+    ];
+
+// keeps track of which messages are going to appear next
+    let messageIndex = 0;
+// function that displayes popup messages
+    function showMessage(){
+// stop showing messages if time is finished 
+      if(minutes <= 0){
+      return;
+      }
+// get the popup element
+    let popup = document.getElementById("popup");
+// insert the message into the popup 
+    document.getElementById("messageText").textContent = messages[messageIndex];
+// make popup visible
+    popup.style.display = "block";
+
+    /* stop scrolling */
+    document.body.style.overflow = "hidden";
+// move on to the next message same as messagesIndex = messagesIndex +1 
+    messageIndex++;
+// if we reach the end of the message list, start again
+    if(messageIndex >= messages.length){
+    messageIndex = 0;
+    }
+
+    }
+// run the message every 15 seconds 
+    let MessageTimer = setInterval(showMessage,15000);
+
+
+
+    /* CLOSE POPUP */
+
+    // get popup element 
+
+    let popup = document.getElementById("popup");
+
+    popup.onclick = function(){
+// only allow closing if time remains 
+    if(minutes >0){
+// hide the popup
+    popup.style.display = "none";
+
+    /* allow scrolling again */
+    document.body.style.overflow = "auto";
+    }
+
+    };
+    // get the close button element 
+    let closeButton = document.getElementById("closeButton");
+    // vlose popup when the x button is clicked 
+    closeButtonn.onclick = function(){
+// only allow closing if time remains 
+    if(minutes > 0){
+// hid the popup
+    document.getElementById("popup").style.display = "none";
+// allow scrolling again
+    document.body.style.overflow = "auto";
+
+}
+
+};
+
+    </script>
+    </body>
+</html>
+
+
