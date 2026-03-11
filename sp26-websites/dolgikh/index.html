@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<head>
+  <title>COSTÜ WEAR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="page">
+
+    <div id="header">
+      <div id="logoArea" onmouseover="showFullLogo()" onmouseout="hideFullLogo()">
+        <img id="logoImage" src="WEBLogoWithoutSubheading.png">
+      </div>
+
+      <div id="searchArea">
+        <input type="text" placeholder="Search More Items Sewn in Blood...">
+        <button id="searchButton">
+          <img id="searchIcon" src="WEBProjectIconOneSEARCH.png">
+        </button>
+      </div>
+
+      <div id="topIcons">
+        <div class="profileWrapper">
+          <img class="topIcon profileIcon" src="WEBProjectIconOnePROFILE.png">
+          <div class="profileHoverText">Your Profile Purchases Determine the Fate of Those Less Fortunate</div>
+        </div>
+
+        <div id="cartIconWrapper">
+          <img id="cartIconOne" class="topIcon cartIcon activeCart" src="WEBProjectIconOneSHOPPINGCARTONE.png" >
+          <img id="cartIconTwo" class="topIcon cartIcon" src="WEBProjectIconOneSHOPPINGCARTTWO.png" >
+          <img id="cartIconThree" class="topIcon cartIcon" src="WEBProjectIconOneSHOPPINGCARTTHREE.png" >
+        </div>
+
+        <span id="cartCount" class="iconNumber">0</span>
+
+        <img class="topIcon heartIcon" src="WEBProjectIconOneFULLHEART.png" >
+        <span id="wishlistCount" class="iconNumber">1</span>
+      </div>
+    </div>
+
+    <div id="navBar">
+      <span>Categorize Women’s</span>
+      <span>Best Selling Atrocities</span>
+      <span>Labor Damage</span>
+      <span>Environmental Damage</span>
+      <span>Educational Damage</span>
+      <span>Quickest to Landfill</span>
+    </div>
+
+    <div id="breadcrumbs">
+      Human Cost / Women’s / Cheapest Suffering / Most Popular / Tops
+    </div>
+
+    <div id="productSection">
+      <div id="thumbnailColumn">
+        <img class="sideThumb" src="WebImageOneII.jpg" onclick="changeImage('WebImageOneII.jpg')">
+        <img class="sideThumb" src="WebImageOneI.jpg" onclick="changeImage('WebImageOneI.jpg')">
+        <img class="sideThumb" src="WebImageOneIII.jpg" onclick="changeImage('WebImageOneIII.jpg')">
+        <img class="sideThumb" src="WebImageOneIV.jpg" onclick="changeImage('WebImageOneIV.jpg')">
+        <img class="sideThumb" src="WebImageOneV.jpg" onclick="changeImage('WebImageOneV.jpg')">
+      </div>
+
+      <div id="mainImageColumn">
+        <img
+          id="mainImage"
+          src="WebImageOne.jpg"
+          onmouseover="hoverMainImage()"
+          onmouseout="unhoverMainImage()"
+        >
+      </div>
+
+      <div id="detailsColumn">
+        <div id="itemRow">
+          <h2 id="itemName" onmouseover="showItemText()" onmouseout="hideItemText()">ITEM NAME</h2>
+
+          <div class="shareWrapper">
+            <img class="shareIcon" src="WEBProjectIconOneSHARE.png" >
+            <div class="shareHoverText">Share This Atrocity!</div>
+          </div>
+
+          <img
+            id="likeIcon"
+            class="itemIcon likeIcon"
+            src="WEBProjectIconOneNULLHEART.png"
+            onclick="toggleLikeIcon()"
+          >
+        </div>
+
+        <p id="sellerText" onmouseover="showSellerText()" onmouseout="hideSellerText()">ONLY 2 LEFT!</p>
+
+        <p id="price">$8.41</p>
+
+        <h3>COLOR SELECTION</h3>
+
+        <div id="colorGrid">
+          <img class="colorThumb" src="WebImageOne.jpg" >
+          <img class="colorThumb" src="WEBProjectShirt2.png" >
+          <img class="colorThumb" src="WEBProjectShirt3.png" >
+          <img class="colorThumb" src="WEBProjectShirt4.png" >
+          <img class="colorThumb" src="WEBProjectShirt5.png" >
+
+          <img class="colorThumb" src="WEBProjectShirt6.png" >
+          <img class="colorThumb" src="WEBProjectShirt7.png" >
+          <img class="colorThumb" src="WEBProjectShirt8.png" >
+          <img class="colorThumb" src="WEBProjectShirt9.png" >
+          <img class="colorThumb" src="WEBProjectShirt10.png" >
+
+          <img class="colorThumb" src="WEBProjectShirt11.png" >
+          <img class="colorThumb" src="WEBProjectShirt12.png" >
+          <img class="colorThumb" src="WEBProjectShirt13.png" >
+          <img class="colorThumb" src="WEBProjectShirt14.png" >
+          <img class="colorThumb" src="WEBProjectShirt15.png" >
+        </div>
+
+        <h3>SIZE SELECTION</h3>
+        <div id="sizeRow">
+          <button>XXS</button>
+          <button>XS</button>
+          <button>S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+          <button>2XL</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="descriptionHoverZone"
+      onmouseover="showInfoText(); showHazardSection()"
+      onmouseout="hideInfoText(); hideHazardSection()"
+    >
+      <div id="descriptionSection">
+        <h3>GARMENT DESCRIPTION</h3>
+        <p id="infoBox">
+          100% polyester, lightweight sheer fabric, spaghetti straps, V-Neckline, regular fit, soft texture, casual everyday wear.
+        </p>
+      </div>
+    </div>
+
+    <div id="hazardSection">
+      <p id="warningTitle">IMPOSED UPON THE MAKER OF THIS GARMENT</p>
+      <div id="warningIcons">
+        <img class="hazardIcon" src="WEBProjectIconOneCAUTION.png" >
+        <img class="hazardIcon" src="WEBProjectIconOneCARCINOGEN.png" >
+        <img class="hazardIcon" src="WEBProjectIconOneDEATH.png" >
+        <img class="hazardIcon" src="WEBProjectIconOnePOLLUTION.png" >
+      </div>
+
+      <p id="warningText">CHILD-LABOR HEAVILY UTILIZED</p>
+    </div>
+
+    <div id="buttonArea">
+      <button id="cartButton" onclick="thankYouMessage()">ADD TO BASKET</button>
+    </div>
+
+    <div id="footer">
+      <div class="footerColumn">
+        <h4>ABOUT</h4>
+        <p>Our Performative Efforts Toward Sustainability</p>
+        <p>Our Limited Labor Regulations</p>
+      </div>
+
+      <div class="footerColumn">
+        <h4>CUSTOMER SUPPORT</h4>
+        <img class="footerIcon" src="WEBProjectIconOne@.png" >
+        <img class="footerIcon" src="WEBProjectIconOnePHONE.png" >
+      </div>
+
+      <div class="footerColumn">
+        <h4>FIND US ON</h4>
+        <img class="footerIcon" src="WEBProjectIconOneINSTAGRAM.png" >
+        <img class="footerIcon" src="WEBProjectIconOneLINKEDIN.png" >
+        <img class="footerIcon" src="WEBProjectIconOneTIKTOK.png" >
+        <img class="footerIcon" src="WEBProjectIconOneFACEBOOK.png" >
+      </div>
+    </div>
+
+    <div id="copyright">
+      ©2023-2026 COSTÜ WEAR All Rights Reserved
+    </div>
+
+  </div>
+
+  <script>
+    let currentImage = "WebImageOne.jpg";
+    let basketCount = 0;
+    let isLiked = false;
+    let wishlistCount = 1;
+   function changeImage(imageName) {
+    // Changes the main image when a thumbnail is clicked
+      currentImage = imageName;
+      document.getElementById("mainImage").src = imageName;
+    }
+
+    function hoverMainImage() {
+      // Checks selected image
+      // swaps to second version while hovering
+      if (currentImage === "WebImageOne.jpg") {
+        document.getElementById("mainImage").src = "WebImageTwoII.jpg";
+
+      } else if (currentImage === "WebImageOneI.jpg") {
+        document.getElementById("mainImage").src = "WebImageTwoI.jpg";
+
+      } else if (currentImage === "WebImageOneII.jpg") {
+        document.getElementById("mainImage").src = "WebImageTwoII.jpg";
+
+      } else if (currentImage === "WebImageOneIII.jpg") {
+        document.getElementById("mainImage").src = "WebImageTwoIII.jpg";
+
+      } else if (currentImage === "WebImageOneIV.jpg") {
+        document.getElementById("mainImage").src = "WebImageTwoIV.jpg";
+        
+      } else if (currentImage === "WebImageOneV.jpg") {
+        document.getElementById("mainImage").src = "WebImageTwoV.jpg";
+      }
+    }
+    // Changes the element back to the currently selected one when the mouse leaves
+    function unhoverMainImage() {
+      document.getElementById("mainImage").src = currentImage;
+    }
+
+    function showFullLogo() {
+      document.getElementById("logoImage").src = "WEBLogoWithSubheading.png";
+    }
+
+    function hideFullLogo() {
+      document.getElementById("logoImage").src = "WEBLogoWithoutSubheading.png";
+    }
+
+    function showItemText() {
+      document.getElementById("itemName").innerHTML = "Affordable Piece at the Cost of Humanity";
+    }
+
+    function hideItemText() {
+      document.getElementById("itemName").innerHTML = "ITEM NAME";
+    }
+
+    function showSellerText() {
+      document.getElementById("sellerText").innerHTML = "WORK CONDITION: SUB-HUMANE";
+    }
+
+    function hideSellerText() {
+      document.getElementById("sellerText").innerHTML = "ONLY 2 LEFT!";
+    }
+
+    function showInfoText() {
+      document.getElementById("infoBox").innerHTML = "This item is likely to disintegrate after 4 months. This item is a result of and contributor to unnecessary overproduction. This item is cheap and convenient for the consumer. This item was made by a child who was often given no option. This item is made in place of a potential education. This item is one of many made during a 14-hour shift. This item was made to please your capitalist comfort.";
+    }
+
+    function hideInfoText() {
+      document.getElementById("infoBox").innerHTML = "100% polyester, lightweight sheer fabric, spaghetti straps, V-Neckline, regular fit, soft texture, casual everyday wear.";
+    }
+
+    function showHazardSection() {
+      document.getElementById("hazardSection").style.display = "block";
+    }
+
+    function hideHazardSection() {
+      document.getElementById("hazardSection").style.display = "none";
+    }
+    // Runs when the Add to Basket button clicked
+    function thankYouMessage() {
+      basketCount = basketCount + 1;
+      document.getElementById("cartCount").innerHTML = basketCount;
+      document.getElementById("cartIconOne").classList.remove("activeCart");
+      document.getElementById("cartIconTwo").classList.remove("activeCart");
+      document.getElementById("cartIconThree").classList.remove("activeCart");
+
+      if (basketCount === 1) {
+        document.getElementById("cartIconTwo").classList.add("activeCart");
+
+      } else if (basketCount >= 2) {
+        document.getElementById("cartIconThree").classList.add("activeCart");
+
+      } else {
+        document.getElementById("cartIconOne").classList.add("activeCart");
+      }
+      alert("Thank you for supporting our production costs and web maintenance.");
+    }
+
+    function toggleLikeIcon() {
+      const likeIcon = document.getElementById("likeIcon");
+      const wishlistNumber = document.getElementById("wishlistCount");
+      
+      if (isLiked === false) {
+        likeIcon.src = "WEBProjectIconOneFULLHEART.png";
+        wishlistCount = wishlistCount + 1;
+        wishlistNumber.innerHTML = wishlistCount;
+        isLiked = true;
+
+      } else {
+        likeIcon.src = "WEBProjectIconOneNULLHEART.png";
+        wishlistCount = wishlistCount - 1;
+        wishlistNumber.innerHTML = wishlistCount;
+        isLiked = false;
+      }
+    }
+  </script>
+
+</body>
+</html>
