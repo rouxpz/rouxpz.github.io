@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Scribt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    
+    <div class="title-container">
+        <div class="title-link"><a href="390website.html"><h1 id="header">SCRIBT</h1></a></div>
+    </div>
+
+    <div class="popup" id="popup1">
+        <h2>Welcome to Scribt!</h2>
+        <p>Every Scribt page brings a unique, one of a kind experience on the platform. Click "Edit Profile" to create your own personalized* page. Make sure to tailor it so it is just your style.</p>
+        <button class="popupbtn" onclick="closePopup1()">Continue to Personal Profile</button>
+    </div>
+
+    <div class="popup2" id="popup2">
+        <h2>Profile Personalized!</h2>
+        <p>Your profile has been successfully personalized! To make the personalization process seamless and easy for you and to ensure platform guidelines are followed, Scribt used an algorithm to best deliver a unique profile suited to your character.</p>
+        <button class="popupbtn" onclick="closePopup2()">Continue to Personal Profile</button>
+    </div>
+
+    <div class="popup3" id="popup3">
+        <h2>FAQ</h2>
+        <p>Q: Why am I unable to edit the details of my profile?<br>A: For the best experience, safety, and platform guideline compliance, Scribt uses an advanced algorithm to create a truly personal profile which matches your needs and those of the platform.<br>Q: I cannot upload and post files from my device.<br>A: Whenever you upload an image to our platform, it is analyzed by our complex artificial intelligence for compliance with your personal character and platform guidelines. Oftentimes, Scribt finds that uploaded images do not align with the user's character or the platform's guidelines, so they are replaced with a much more personal image, unique to you. This way, Scribt makes sure you only share what is best for and true to yourself, your values, and the platform.<br>If you believe there has been a mistake with the way Scribt presents your character, you can seek further help <a href="error.html">here</a>.</p>
+        
+        <button class="popupbtn" onclick="closePopup3()">Done</button>
+    </div>
+
+    <div class="post-popup" id="post-popup">
+        <h2>Create a Post</h2>
+        <p>It seems that the photos on your device do not accurately represent you or the platform guidelines. Scribt has generated a post based on your character and values which better suits you and the platform.</p>
+        <button class="popupbtn" onclick="make_post(); closePostPopup()">Done</button>
+    </div>    
+
+    <div class="profile-popup" id="profile-popup">
+        <h2>Are you male or female?</h2>
+        <button class="genderbtn" onclick="change_text_male(); changeLabel();openPopup2();makenewPfpMale();closeProfilePopup()">Male</button>
+        <button class="genderbtn" onclick="change_text_female(); changeLabel();openPopup2();makenewPfpFemale();closeProfilePopup()">Female</button>
+    </div>   
+
+    <div class="container">
+        
+        <img class="default-pfp" id="default-pfp" src="Images/blank-pfp.png" alt="">
+        <img id="new-pfp-male" class="new-pfp-male" src="Images/pfp_male.jpg" alt="">
+        <img id="new-pfp-female" class="new-pfp-female" src="Images/pfp_female.jpg" alt="">
+        <h1 id="username">@username</h1>
+
+        <!-- <div class="pfp-container"></div> -->
+        <div class="user-container">
+
+            <div class="bio-container">
+                
+                <h2 id="name">Your Name</h2>
+                <p id="bio">Your Bio Here</p>
+            </div>
+            
+            <h2 id="followers">Followers: 0</h2>
+
+            <div class="btn-container">
+                <button class="button" id="editprofile" onclick="openProfilePopup()">Edit Profile</button>
+                <!-- <input type="file" name="files" id="myfiles" style="display:none"> -->
+                <button class="button" id="filebutton" onclick="openPostPopup()">Create Your Own Post</input>
+                <button class="faq-btn" id="faq" onclick="openPopup3()">?</button>
+            </div>
+        </div>
+
+        <div id="post-grid">
+
+        </div>
+    </div>
+
+
+    <script src="javascript.js"></script>
+
+</body>
+
