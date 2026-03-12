@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JS deomo for class </title>
+</head>
+<body>
+    <h1>demo page</h1>
+    <button onclick="alert('hello world!')">click me!
+    </button>
+    <button id="jsdemo1">script tag demo</button>
+    <button onclick="clickfunction()">function demo</button>
+    <script> 
+      document.getElementById("jsdemo1").onclick = function(){
+        alert("hello again world!");
+        alert("you can't get rid of me so easily!");
+      }
+      function clickfunction(){
+        alert("third time is the charm!");
+
+      }
+    </script>
+</body>

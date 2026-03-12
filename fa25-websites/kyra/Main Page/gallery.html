@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .photo-section {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #333;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 200px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        img {
+            max-width: 300px;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+            border: 2px solid white;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .label {
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Photo Gallery</h1>
+        
+        <div class="gallery">
+            <!-- Left Section -->
+            <div class="photo-section">
+                <button onclick="changeImageLeft()">Change Photo</button>
+                <img id="leftImage" src="../Images for Web Publication/CamcorderPhotoReplacement.jpg" alt="Left Photo">
+                <div class="label">Left Photo</div>
+            </div>
+
+            <!-- Middle Section -->
+            <div class="photo-section">
+                <button onclick="changeImageMiddle()">Change Photo</button>
+                <img id="middleImage" src="../Images for Web Publication/CameraLensPhotoReplacement.jpg" alt="Middle Photo">
+                <div class="label">Middle Photo</div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="photo-section">
+                <button onclick="changeImageRight()">Change Photo</button>
+                <img id="rightImage" src="../Images for Web Publication/RearviewMirrorPhotoReplacement.jpg" alt="Right Photo">
+                <div class="label">Right Photo</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeImageLeft() {
+            const leftImage = document.getElementById('leftImage');
+            leftImage.src = '../Images for Web Publication/CirclePhotoReplacement.jpg';
+        }
+
+        function changeImageMiddle() {
+            const middleImage = document.getElementById('middleImage');
+            middleImage.src = '../Images for Web Publication/KeyholePhotoReplacement.jpg';
+        }
+
+        function changeImageRight() {
+            const rightImage = document.getElementById('rightImage');
+            rightImage.src = '../Images for Web Publication/RippedPaperPhotoReplacement.jpg';
+        }
+    </script>
+</body>
+</html>

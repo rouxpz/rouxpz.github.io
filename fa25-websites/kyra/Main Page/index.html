@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        button {
+            padding: 20px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #333;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button onclick="goToGallery()">View Gallery</button>
+    </div>
+
+    <script>
+        function goToGallery() {
+            window.open('gallery.html', '_blank');
+        }
+    </script>
+</body>
+</html>
