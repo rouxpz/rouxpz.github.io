@@ -1,0 +1,120 @@
+
+body {
+    margin:0px;
+    background-color: rgb(40,39,37);
+}
+
+@font-face {
+    font-family: 'Dunbar Low';
+    src: url(../Fonts/dunbar-low-light.ttf);
+    
+}
+
+@font-face {
+    font-family: 'TT Modernoir';
+    src: url(../Fonts/TT_Modernoir_Trial_Medium.ttf);
+    font-weight: bolder;
+    
+}
+
+p {
+    color:rgb(253, 206, 79);
+
+    font-family: 'Dunbar Low';
+    font-size: 20pt;
+}
+
+h1 {
+    color:rgb(253, 206, 79);
+    font-family: 'TT Modernoir';
+    font-size: 32.36pt;
+}
+
+h2 {
+    color:rgb(253, 206, 79);
+    font-family: 'TT Modernoir';
+    font-size: 32.36pt;
+}
+
+a, a:visited {
+    color:rgb(73,54,65);
+    font-family: 'TT Modernoir';
+    font-size: 20pt;
+    font-weight: bolder;
+    background-color: rgb(253, 206, 79);
+    text-decoration: none;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    padding-bottom: 5pt;
+    padding-top: 5pt;
+}
+
+a:hover {
+    background-color:rgb(240, 189, 50);
+}
+
+.titleLink a { 
+    background-color: none;
+    font-family: 'TT Modernoir';
+    font-size: 32.36pt; 
+    padding: 0pt;
+}
+
+.titleLink h1 {
+    color:rgb(253, 206, 79);
+}
+
+.titleLink h1:hover {
+    color:rgb(240, 189, 50);
+}
+
+.titleContainer{
+    position:static;
+    display:flex;
+    background-color:rgb(73,54,65);
+    padding-left: 5%;
+    padding-right: 5%;
+    margin:0px;
+}
+
+.container {
+    display: block;
+    padding: 3%;
+}
+
+.left {
+    display:inline-block;
+    width:50%;
+    min-width: 450px;
+    float:left;
+}
+
+.right {
+    display:block;
+    width:35%;
+    min-width: 300pt;
+    float:right;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 1200px) {
+  .right {
+    float:none;
+    padding-left: 3%;
+    padding-top: 350px;
+  }
+}
+
+#quartiers {
+    margin-bottom: 50pt;
+}
+
+.mapHover path:hover {
+        fill: rgb(56, 42, 50);
+        transition: 300ms;
+    }
+
+.ButtonHover path:hover {
+        fill: rgb(253, 206, 79);
+        transition: 300ms;
+    }
