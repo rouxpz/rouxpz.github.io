@@ -1,0 +1,246 @@
+.navbar {
+    width: 100%;
+    background-color: #9a8574;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+}
+
+.navbar a {
+    font-family: "Bodini";
+    font-size: 20px;
+    color: #f4eee5;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+body {
+    text-align: center;   
+}
+
+.welcome-text {
+    margin-top: 80px; 
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+
+
+
+.image-section {
+    background-color: #f4eee5;  
+    width: 100%;
+    padding: 40px 0;          
+}
+.image-section img {
+    display: block;
+    margin: 0 auto;            
+    max-width: 90%;           
+    height: auto;
+}
+
+
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;            
+    background-color: #f4eee5;
+    padding: 40px 0;
+}
+.image-row img {
+    height: 600px;        
+    width: auto;          
+    object-fit: cover;  
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1, h2, h4, h5 {
+    color: #9a8574;
+}
+h1 {
+    font-size: 300px;   
+    color: #9a8574;       
+    text-align: center; 
+    margin: 40px 0;     
+    font-weight: bold;  
+    font-family: "Bodini";
+    letter-spacing: 25px;
+    background-color: #f4eee5;
+}
+h2 {
+    font-size: 100px;
+    color: #e8e0d5;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: bold;
+    font-family: "Bodini";
+    background-color: #9a8574;
+}
+h3 {
+    font-size: 25px;
+    color: #9a8574;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: bold;
+}
+h4 {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    color: black;
+    font-family: "Optima"
+}
+h5 {
+    font-size: 18px;
+    max-width: 750px;
+    margin: 40px auto;    
+    text-align: center;
+    line-height: 1.6;
+    color: black;
+    font-weight: 500;
+    font-family: "Optima", sans-serif;
+}
+h6 {
+    font-size:20px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    color: #9a8574;
+    font-family: "Bodini"
+}
+
+
+
+
+
+
+
+
+.beige-section {
+    background-color: #e8e0d5; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+
+@font-face {
+    font-family: "Bellefair";
+    src: url(../fonts/Bellefair/Bellefair-Regular.ttf); format:("truetype");
+}
+
+@font-face {
+    font-family: "Optima";
+    src: url(../fonts/optima-cufonfonts/OPTIMA.TTF);
+}
+
+@font-face {
+    font-family: "Bodini";
+    src: url(../fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz\,wght.ttf); format:("true type");
+}
+
+a {
+    font-family: "Bodini";
+    color: #9a8574;
+    font-size: 24px; /* adjust as needed */
+    text-decoration: none;
+    display: block;       
+    margin: 15px 0;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+.about-title {
+    font-size: 140px;        
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #9a8574;
+    font-family: "Bodini";
+    letter-spacing: 15px;
+}
+
+.about-text {
+    max-width: 700px;
+    margin: 40px auto;         
+    text-align: center;
+    line-height: 1.7;
+}
+
+
+.about-image {
+    display: block;
+    margin: 60px auto;         
+    max-width: 80%;            
+    height: auto;
+    border-radius: 6px;
+}
+
+
+
+
+
+.mind-title {
+    font-size: 140px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    background-color: #f4eee5;
+    color: #9a8574;
+    font-family: "Bodini";
+    letter-spacing: 15px;
+}
+
+.mind-text {
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 1.7;
+    font-family: "Optima", sans-serif;
+    color: black;
+}
+
