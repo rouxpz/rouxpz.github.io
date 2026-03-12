@@ -1,0 +1,99 @@
+h1 {
+    color:#625531;
+    font: size 275px;
+    margin: 5%;
+    padding:5%;
+    text-align: center;
+}
+
+body{
+    font-family: fantasy, Geneva, Tahoma, sans-serif;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    color:#625531;
+    font-family: fantasy;
+    text-align: center;
+    font: size 40px;
+    margin:0px;
+    padding:2%;
+
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    margin-bottom: 2%;
+    font-family: fantasy;
+}
+
+.box a {
+    text-decoration: none;
+    background-color: bisque;
+    width: 10%;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    border: solid #625531;
+    font-size:20px;
+}
+
+.box a:hover {
+    background-color: #8d784f;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 2%;
+}
+
+.picture img {
+    display: block;
+}
+
+.title-container {
+    display: flex;             
+    align-items: center;        
+    justify-content: center;   
+    gap: 1%;                  
+    margin: -13%;             
+}
+
+.title-container h1 {
+    color: #625531;
+    font-size: 30px;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.floral {
+     transform: scaleX(-1);
+}
+.picture-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: -15px;
+}
+
+.picture img {
+    margin: 0 5px; 
+}
+
+.bee {
+    width: 20%; 
+    height: 30%;
+    margin: 0;
+}
+
+

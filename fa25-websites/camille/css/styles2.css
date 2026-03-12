@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: fantasy, Geneva, Tahoma, sans-serif;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color:#625531;
+    font-size: 30px;
+    margin: 5%;
+    padding:5%;
+    text-align: center;
+    font-family: fantasy, Geneva, Tahoma, sans-serif;
+    
+}
+
+h2 {
+    color: #625531;
+    font-size: 30px;
+    text-align: center;
+    font-family: fantasy, Geneva, Tahoma, sans-serif;
+    padding-bottom: 0%;
+    margin-top: 2%;
+}
+
+h2 .content {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #625531;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #625531;
+    margin-top: 20%;
+    margin-bottom: 2%;
+    padding-bottom: 0;
+}
+
+.container {
+    display: flex;
+    gap: 2%;
+    padding: 2%;
+}
+
+.sidebar {
+    width: 15%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 5%;
+}
+
+.side-img {
+    width: 20%;
+    border: solid #625531;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    background-color: #625531;
+    margin: 20% auto;
+    padding: 20%;
+    text-align: center;
+    width: 70%;
+    height: 20%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: bisque;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #8d784f;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.pagetitle {
+    text-align: center;
+    font-size: 40px;
+    color: #625531;
+    margin-bottom: 20%;
+}
+
+.row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 3%;
+    padding-left: 11%;
+}
+
+.row2 {
+    display: flex;
+    gap: 5%;
+    padding-left: 22%;
+}
+
+.img-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-block img {
+    width: 220px;
+    border: 2px solid #625531;
+}
+
+.caption {
+    margin-top: 3%;
+    color: #625531;
+    font-size: 18px;
+    text-align: center;
+}
+
+.bee {
+    position: reltive;
+    margin-top: -100px;
+}
+
+.title-container {
+    display: flex;             
+    align-items: center;        
+    justify-content: center;   
+    gap: 1%;                  
+    margin: -175px;             
+}
+
+.title-container h1 {
+    color: #625531;
+    font-size: 30px;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.floral {
+     transform: scaleX(-1);
+}
+
+
+
