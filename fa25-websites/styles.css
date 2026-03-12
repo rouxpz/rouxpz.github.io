@@ -1,0 +1,75 @@
+body {
+    font-family:Monaco, monospace;
+    padding:2%;
+    background-color: gray;
+    /* background-image: url(img/0.jpeg); */
+}
+
+h1, h2 {
+    margin-left:2%;
+    margin-bottom:3%;
+    padding:1%;
+    background-color: antiquewhite;
+}
+
+h1 {
+    font-size: 2vw;
+}
+
+h2 {
+    font-size: 1.5vw;
+}
+
+button {
+    font-family: Monaco, monospace;
+    font-size:1.5vw;
+    width:20vw;
+    height:10vh;
+    background-color: lightgray;
+}
+
+button:hover {
+    background-color: gray;
+    cursor:pointer;
+}
+
+.row {
+    width:100%;
+    display:flex;
+}
+
+.project {
+    width:33%;
+    margin:2%;
+    /* padding:10%; */
+}
+
+#guestbook {
+    width:15vw;
+    height:10vh;
+    background-color: black;
+    position:fixed;
+    top:9%;
+    right:5%;
+    padding:2%;
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+a {
+    color:greenyellow;
+}
+
+a:hover {
+    color:black;
+    background-color: greenyellow;
+    text-decoration: line-through;
+    cursor: cell;
+}
+
+#footer {
+    margin-top: 1%;
+    margin-left:2%;
+    color:white;
+    background-color: black;
+}
