@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Improve your "Simply Everyday"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container page3">
+
+    <h1 class="fade-scroll">Improve Your Routine</h1>
+
+    <p class="fade-scroll">
+         Improving your daily routine is valuable, whether it involves making a few small changes or simply reevaluating parts of your day to function better. Below, I've listed a few habits I've added to my own routine to improve my everyday life.
+    </p>
+
+    <h3 class="fade-scroll">Meditation</h3>
+    <div class="image-row fade-scroll">
+        <img class="fade-scroll" src="meditation.jpg" alt="Meditation">
+
+        <button class="tip-btn fade-scroll" 
+                onclick="showTip(this, 'Try meditating for 5 minutes every morning to start your day calm!')">
+            Click me!
+        </button>
+    </div>
+    <p class="fade-scroll">
+         Meditation is known to be very beneficial in various ways. Some of the largest benefits include lowered stress levels, improved sleep, supports emotional health, decreased blood pressure and it can even help control pain. Personally, meditation has significantly reduced my stress levels. Visit the link below to learn more about why meditation should be added to your daily routine.
+
+        <br><br>
+        <a class="fade-scroll" href="https://www.healthline.com/nutrition/12-benefits-of-meditation" target="_blank">
+            https://www.healthline.com/nutrition/12-benefits-of-meditation
+        </a>
+    </p>
+
+    <h3 class="fade-scroll">Limit Screen Time</h3>
+    <div class="image-row fade-scroll">
+        <img class="fade-scroll" src="phonex.png" alt="Limit screen time">
+
+        <button class="tip-btn fade-scroll" 
+                onclick="showTip(this, 'Try taking 10-minute screen breaks every hour to relax your eyes!')">
+            Click me!
+        </button>
+    </div>
+    <p class="fade-scroll">
+        Our generation struggles with excessive screen time, so it's important to pause and consider how much of your day is spent on a screen instead of being present in the world around you. 
+        Reducing screen time can support both your physical and mental health—improving focus, enhancing brain function, supporting better sleep, improving posture, and reducing eye strain. 
+        Cutting back is especially helpful before bed. Try reading a book, journaling, or doing another calming activity instead. Check out the link below to learn more about the benefits of reducing screen time!
+   
+        <br><br>
+        <a class="fade-scroll" href="https://www.jaimedicalsystems.com/health-benefits-of-reducing-your-screen-time/" target="_blank">
+            https://www.jaimedicalsystems.com/health-benefits-of-reducing-your-screen-time/
+        </a>
+    </p>
+
+    <h3 class="fade-scroll">Consistent Sleep Schedule</h3>
+    <div class="image-row fade-scroll">
+        <img class="fade-scroll" src="sleeping.jpg" alt="Consistent sleep schedule">
+
+        <button class="tip-btn fade-scroll" 
+                onclick="showTip(this, 'Go to bed and wake up at the same time every day, even on weekends!')">
+             Click me!
+        </button>
+    </div>
+    <p class="fade-scroll">
+         A consistent sleep schedule is essential for maintaining good health. Getting at least eight hours of sleep at roughly the same time each night can strengthen your immune system, boost your mood, enhance cognitive function, and even support cardiovascular health. Many people overlook how crucial sleep truly is, and as a result, they end up feeling fatigued or getting sick, which can impact their days ahead. For more tips on improving your sleep routine, visit the link below.
+        <br><br>
+        <a class="fade-scroll" href="https://sleep.me/post/benefits-of-sleep-schedule" target="_blank">
+            https://sleep.me/post/benefits-of-sleep-schedule
+        </a>
+    </p>
+
+</div>
+
+<script src="js/javascript.js"></script>
+
+<script>
+    function showTip(button, message) {
+        let tipContainer = button.nextElementSibling;
+
+        if (!tipContainer || !tipContainer.classList.contains('tip-message')) {
+            tipContainer = document.createElement('div');
+            tipContainer.classList.add('tip-message', 'fade-scroll');
+            button.parentNode.appendChild(tipContainer);
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(tipContainer);
+        }
+
+        tipContainer.style.display = 'inline-block';
+        tipContainer.textContent = message;
+    }
+</script>
+
+</body>
+</html>
+
