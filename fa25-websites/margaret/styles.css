@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Garamond Italic';
+    src: url(Garamond\ Italic.ttf);
+}
+
+h3{
+    color:red;
+    background-color:rgb(255, 180, 143);
+    font-family: 'Garamond Italic';
+    font-size: 60pt;
+}
+
+h1{
+    color:red;
+    background-color:rgb(255, 180, 143);
+    font-family: 'Garamond Italic';
+    font-size: 40pt;
+}
+
+.Headings {
+    display: block;
+}
+
+p {
+    color:red;
+    background-color:rgb(255, 180, 143);
+    font-family: 'Garamond Italic';
+    font-size: 30pt;
+}
+
+.container {
+    position: relative;
+}
+
+.BGimage {
+    /* position: absolute; */
+
+    /* z-index: 1; */
+    /* width: 30%;
+    height:1000px;
+    /* background-color: red; */
+    background-image: url("loveletter.JPEG");
+    display: block; */
+}
+
+.Fronttext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+}
+
+
+
+.hoverText {
+    display: none;   
+}
+
+.appearDisappear:hover .hoverText {
+    display: block;  
+}
+
+
+
+
+#textDiagonal {
+    transform: rotate(45deg);
+    font-size:200pt;
+
+}
+
+#textDiagonal1 {
+    transform: rotate(45deg);
+    font-size: 100pt;
+}
+
+#textVertical {
+    transform-origin: 0%;
+    transform: rotate(90deg);
+    font-size: 100 pt
+    display:none;
+}
+
+#textVertical1 {
+    transform-origin: 0%;
+    transform: rotate(90deg);
+    font-size: 100 pt
+    display:none;
+}
+
+#clickableArea1 {
+    background-color: red;
+    position:absolute;
+    bottom:1%;
+    left:1%;
+    width:20%;
+    height:10vh;
+}
+
+/* #clickableArea1:hover {
+    /* background-color: blue; */
+/* } */
+
+#clickableArea2 {
+    /* background-color: red; */
+    position:absolute;
+    bottom:3%;
+    left:50%;
+    width:20%;
+    height:10vh;
+}
+
+#clickableArea3 {
+    /* background-color: red; */
+    position:absolute;
+    top:3%;
+    right:5%;
+    width:20%;
+    height:10vh;
+}
+
+ /* #clickableArea2:hover { 
+  background-color: blue;
+ }  */
+
+#diagonalText {
+    position:absolute;
+    top:10%;
+    left:1%;
+    width:20%;
+    height:20vh;
+
+    /* Make hover area invisible */
+    background: transparent;
+}
+
+#ScrollText {
+    padding-top: 140%;
+    padding-left: 40%;
+}
+
+a {
+    color:red;
+    background-color:rgb(255, 180, 143);
+    display:block;
+    font-family: 'Garamond Italic';
+    font-size: 40pt;
+}
+
+a:hover {
+    color:red;
+    background-color:rgb(159, 213, 235);
+    display:block;
+    font-family: 'Garamond Italic';
+    font-size: 40pt;
+}
+}
