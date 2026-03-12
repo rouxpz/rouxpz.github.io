@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Fonttest";
+    src: url(../fonts/);
+}
+
+body{
+    margin:0px;
+    background-image: url("../images/weird.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+}

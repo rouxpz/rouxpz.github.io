@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>can't go back</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <img src="images/sleep.png" alt="" usemap="#sleepmap" class="sideImg">
+
+    <map name="sleepmap">
+
+        <area shape="circle" coords="679,513,29"
+            href="#"
+            title="not here"
+            onclick="showImg1(); return false;">
+
+        <area shape="circle" coords="526,396,29"
+            href="#"
+            title="gone"
+           onclick="showImg2(); return false;">
+
+        <area shape="circle" coords="422,278,18"
+            href="#"
+            title="somewhere else"
+            onclick="showImg3(); return false;">
+
+        <area shape="circle" coords="429,196,16"
+            href="#"
+            title="away"
+            onclick="showImg4(); return false;">
+    </map>
+
+    <img id="img1" class="popupImg"
+        src="images/kids/1.PNG"
+        style="display:none; position:absolute; top:25px; right:25px;"
+        onclick="secondPopup('img1b')">
+
+    <img id="img2" class="popupImg"
+        src="images/kids/2.PNG"
+        style="display:none; position:absolute; top:100px; right:450px;"
+        onclick="secondPopup('img2b')">
+
+    <img id="img3" class="popupImg"
+        src="images/kids/3.PNG"
+        style="display:none; position:absolute; bottom:40px; left:20px;"
+        onclick="secondPopup('img3b')">
+
+    <img id="img4" class="popupImg"
+        src="images/kids/4.PNG"
+        style="display:none; position:absolute; bottom:60px; right:80px;"
+        onclick="secondPopup('img4b')">
+
+
+    <img id="img1b" src="images/kids/5.PNG" class="popupImg"
+        style="display:none; position:absolute; bottom:120px; right:600px;"
+        onclick="thirdPopup('img1c')">
+
+    <img id="img2b" src="images/kids/6.PNG" class="popupImg"
+        style="display:none; position:absolute; bottom:200px; left:50px;"
+        onclick="thirdPopup('img2c')">
+
+    <img id="img3b" src="images/kids/7.PNG" class="popupImg"
+        style="display:none; position:absolute; bottom:200px; right:50px;"
+        onclick="thirdPopup('img3c')">
+
+    <img id="img4b" src="images/kids/8.PNG" class="popupImg"
+        style="display:none; position:absolute; bottom:475px; right:950px;"
+       onclick="thirdPopup('img4c')">
+
+
+   <img id="img1c" src="images/kids/9.PNG" class="popupImg"
+        style="display:none; position:absolute; bottom:200px; right:200px;">
+
+    <img id="img2c" src="images/kids/10.PNG" class="popupImg"
+       style="display:none; position:absolute; bottom:50px; right:200px;">
+
+    <img id="img3c" src="images/kids/11.PNG" class="popupImg"
+       style="display:none; position:absolute; bottom:180px; left:120px;">
+
+    <img id="img4c" src="images/kids/12.PNG" class="popupImg"
+        style="display:none; position:absolute; bottom:220px; right:200px;">
+
+    <p class="vertical">
+        c   a   n     y   o   u     f   i   n   d     u   s     a   l   l   ?
+    </p>
+</body>
+
+<script>
+
+    var newpopup1 = false;
+    var newpopup2 = false;
+    var newpopup3 = false;
+    var newpopup4 = false;
+
+    function showImg1() {
+        document.getElementById("img1").style.display = "block";
+        newpopup1 = true;
+        console.log("showImg1 run - newpopup1 =", newpopup1);
+    }
+
+    function showImg2() {
+        document.getElementById("img2").style.display = "block";
+        newpopup2 = true;
+        console.log("showImg2 run - newpopup2 =", newpopup2);
+    }
+
+    function showImg3() {
+        document.getElementById("img3").style.display = "block";
+        newpopup3 = true;
+        console.log("showImg3 run - newpopup3 =", newpopup3);
+    }
+
+    function showImg4() {
+        document.getElementById("img4").style.display = "block";
+        newpopup4 = true;
+        console.log("showImg4 run - newpopup4 =", newpopup4);
+    }
+
+    function allOpen() {
+        return newpopup1 && newpopup2 && newpopup3 && newpopup4;
+    }
+
+    function secondPopup(popupid) {
+        if (allOpen()) {
+        document.getElementById(popupid).style.display = "block";
+            if (popupid == "img1b") bpopup1 = true;
+            if (popupid == "img2b") bpopup2 = true;
+            if (popupid == "img3b") bpopup3 = true;
+            if (popupid == "img4b") bpopup4 = true;
+        }
+    }
+
+    var bpopup1 = false;
+    var bpopup2 = false;
+    var bpopup3 = false;
+    var bpopup4 = false;
+
+    function allOpenB() {
+        return bpopup1 && bpopup2 && bpopup3 && bpopup4;
+    }
+    function thirdPopup(popupid) {
+
+    if (allOpenB()) {
+        document.getElementById(popupid).style.display = "block";
+        }
+    }
+
+    function thirdPopup(popupid) {
+        if(allOpenB()) {
+            document.getElementById(popupid).style.display = "block";
+
+        if (popupid == "img1c") cpopup1 = true;
+        if (popupid == "img2c") cpopup2 = true;
+        if (popupid == "img3c") cpopup3 = true;
+        if (popupid == "img4c") cpopup4 = true;
+
+        if (allOpenC()) {
+            window.location.href = "finalpage.html";
+        }
+        }
+    }
+
+    function allOpenC() {
+        return cpopup1 && cpopup2 && cpopup3 && cpopup4;
+    }
+
+</script>
