@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Angular";
+    src: url(../fonts/angular.ttf);
+}
+
+body {
+    background-image: url(../images/black.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    color: white;
+    font-size: 2vw;
+    font-family: "Angular", 'Times New Roman', Times, serif;
+}
+
+#hand1 {
+    float: right;
+    width: 56vw;
+    opacity: 1%;
+}
+
+#hand1:hover {
+    opacity: 100%;
+}
+
+.title {
+    position: absolute top: 30% left: 30%;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 3vw;
+    color: #23c846;
+}

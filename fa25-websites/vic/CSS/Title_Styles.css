@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Angular";
+    src: url(../fonts/angular.ttf);
+}
+
+body {
+    background-image: url(../images/Test1_Green.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Angular", 'Times New Roman', Times, serif;
+    text-align: right;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 7vw;
+}
+
+a:hover {
+    font-size: 7.5vw;
+    color: #23c846;
+}
