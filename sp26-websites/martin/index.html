@@ -1,0 +1,69 @@
+''
+<!DOCTYPE html>
+<html>
+<head>
+<title>enter</title>
+</head>
+
+<body>
+
+<a href="#" onclick="makeMore()">enter</a>
+
+<script>
+
+var count = 1
+
+function makeMore() {
+
+count = count + 1
+
+for (var i = 0; i < count * 2; i++) {
+
+var link = document.createElement("a")
+
+// text (with some variation)
+if (i % 3 == 0) {
+link.innerHTML = "continue"
+}
+
+if (i % 3 == 1) {
+link.innerHTML = "this way"
+}
+
+if (i % 3 == 2) {
+link.innerHTML = "exit"
+}
+
+link.href = "#"
+
+// random behavior
+var r = Math.random()
+
+if (r < 0.7) {
+link.onclick = makeMore
+}
+
+if (r >= 0.7) {
+link.onclick = function() {
+return false
+}
+}
+
+// style
+link.style.position = "absolute"
+link.style.left = Math.random() * 800 + "px"
+link.style.top = Math.random() * 600 + "px"
+
+// add to page 
+document.body.appendChild(link)
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
+
+''
